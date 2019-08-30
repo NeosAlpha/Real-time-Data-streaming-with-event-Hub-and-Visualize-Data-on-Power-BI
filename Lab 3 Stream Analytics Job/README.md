@@ -53,7 +53,7 @@ Table name: This field is the name of the table to be used in Power BI.
 
 5. Click Save.
 
-# 3. Configure the query of the Stream Analytics job
+# 4. Configure the query of the Stream Analytics job
 
 1. Under Job Topology, click Query.
 
