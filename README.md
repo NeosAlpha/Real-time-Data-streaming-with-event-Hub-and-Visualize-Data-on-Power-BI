@@ -10,7 +10,7 @@ In this demo we are analysing streaming data using Azure Event Hubs.Azure Stream
 # Set up
 We are dividing this task in following Labs
 
-Lab 1: Create Event Hub resource on Azure and configure its policy
+Lab 1: Create Even Hub Resource on Azure
 
 Lab 2: Push sales data of Evenrt sales to event hub for Stream Analysis
 
