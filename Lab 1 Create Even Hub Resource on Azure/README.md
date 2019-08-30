@@ -1,5 +1,6 @@
 # Create Event Hub resource on Azure and configure its policy
 
+
 # 1. Create Eventhub Namespace
 ![EventNameSpace.png](Images/EventNameSpace.png)
 
