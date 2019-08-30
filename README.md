@@ -14,6 +14,6 @@ Lab 1: Create Event Hub resource on Azure and configure its policy
 
 Lab 2: Push sales data of Evenrt sales to event hub for Stream Analysis
 
-Lab 3: Create Stream Analytics Job and Configure Input and output
+Lab 3: Stream Analytics Job
 
 Lab 4: Power BI for Visualize Live Data Streaming
