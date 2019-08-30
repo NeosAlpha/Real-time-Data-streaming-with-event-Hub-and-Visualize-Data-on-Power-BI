@@ -16,4 +16,4 @@ Lab 2: Push sales data of Evenrt sales to event hub for Stream Analysis
 
 Lab 3: Create Stream Analytics Job and Configure Input and output
 
-Lab 4: show Sales data on PowerBi using Stream Data Analytics
+Lab 4: Power BI for Visualize Live Data Streaming
