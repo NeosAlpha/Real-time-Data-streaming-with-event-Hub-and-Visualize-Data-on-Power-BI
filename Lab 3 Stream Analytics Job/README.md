@@ -34,7 +34,39 @@ Event Hubs policy name: (As created in Job 1).
 
 Event Hubs consumer group: Leave this field blank to use the default consumer group.  
 
-# 3. Define Shared Access Policies	
-![DefinePolicy.png](Images/DefinePolicy.png)
+# 3. Add an output to the Stream Analytics job	
+![stream-analytics-outputs.png](Images/stream-analytics-outputs.png)
 
-Goto Setting on Event Hub Namespace and click on Shared Access policy. Click o New Policy and Select Manage Option. Copy Primary Key connection string for further use. 
+1. Under Job Topology, click Outputs. This field is the name of the output stream, used when defining the query for the data.
+
+2. In the Outputs pane, click Add, and then select Power BI. On the screen that appears, complete the following fields:
+
+Output alias: This field is the unique alias for the output.
+
+Dataset name: This field is the name of the dataset to be used in Power BI.
+
+Table name: This field is the name of the table to be used in Power BI.
+
+3. Click Authorize, and sign in to your Power BI account.
+
+4. Accept the defaults for the rest of the fields.
+
+5. Click Save.
+
+# 3. Configure the query of the Stream Analytics job
+
+1. Under Job Topology, click Query.
+
+2. Replace the query with the following one:	
+
+SELECT System.Timestamp AS WindowEnd,
+SUM(sellPrice) AS TotalSalesRevenue,
+SUM(shippingCost) AS TotalShippingRevenue,
+SUM(sellQty) AS TotalsaleQty
+INTO "SalesData"
+FROM "inputEventHub" TIMESTAMP BY saleDate
+GROUP BY TumblingWindow(Duration(second, 1))
+
+3. Click Save.
+
+4. Run the Stream Analytics job
